@@ -20,7 +20,7 @@ contract ChristmasBastardsNFT is ERC721URIStorage {
         _safeMint(msg.sender, tokenId);
         console.log("NFT %s minted to %s", tokenId,  msg.sender);
 
-        _setTokenURI(tokenId, "placeholder");
+        _setTokenURI(tokenId, "https://ipfs.io/ipfs/QmWR2CdE2JcSgqhqK8o7jWaHa1F38Pwq832zzJgkS7MdCc");
 
         _tokenIds.increment();
     }
