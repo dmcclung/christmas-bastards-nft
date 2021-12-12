@@ -7,10 +7,10 @@ async function main() {
 
   console.log("Contract deployed to", loot.address);
 
-  const tx = await loot.makeNFT();
+  const tx = await loot.mintLoot(0);
   await tx.wait();
 
-  const tx2 = await loot.makeNFT();
+  const tx2 = await loot.mintLoot(1);
   await tx2.wait();
 }
 
