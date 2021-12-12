@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "base64-sol/base64.sol";
 import "hardhat/console.sol";
 
 contract Loot is ERC721URIStorage {
@@ -71,7 +72,22 @@ contract Loot is ERC721URIStorage {
         console.log(svg);
         console.log("--------------------\n");
 
-        _setTokenURI(tokenId, "https://ipfs.io/ipfs/QmWR2CdE2JcSgqhqK8o7jWaHa1F38Pwq832zzJgkS7MdCc");
+        /* solhint-disable quotes */
+        string memory json = Base64.encode(
+            bytes(
+                string(
+                    abi.encodePacked(
+                        '{"name": "Loot",',
+                        '"description": "A slime draws near! Command?", "image": "data:image/svg+xml;base64,',
+                        Base64.encode(bytes(svg)),
+                        '"}'
+                    )
+                )
+            )
+        );
+        /* solhint-enable quotes */
+
+        _setTokenURI(tokenId, json);
     }
 
 }
