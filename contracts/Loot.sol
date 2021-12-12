@@ -5,13 +5,13 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
-contract ChristmasBastardsNFT is ERC721URIStorage {
+contract Loot is ERC721URIStorage {
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     
-    constructor() ERC721 ("ChristmasBastardsNFT", "XMAS"){
-        console.log("Deploying Christmas Bastards NFT");
+    constructor() ERC721 ("Loot", "LOOT"){
+        console.log("Deploying Loot");
     }
 
     function makeNFT() public {

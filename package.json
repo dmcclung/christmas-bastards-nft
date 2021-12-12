@@ -1,9 +1,12 @@
 {
-  "name": "christmas-bastards-nft",
+  "name": "loot-clone-nft",
   "version": "1.0.0",
-  "repository": "git@github.com:dmcclung/christmas-bastards-nft.git",
+  "repository": "git@github.com:dmcclung/loot-clone-nft.git",
   "author": "dmcclung <dylanmcclung@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "deploy:rinkeby": "hardhat run scripts/mint.ts --network rinkeby"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^2.1.3",
@@ -20,6 +23,8 @@
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-chai-expect": "^3.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",

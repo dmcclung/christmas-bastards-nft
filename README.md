@@ -1,4 +1,4 @@
-# Christmas Bastards NFT Collection
+# Loot Clone NFT
 
 # Advanced Sample Hardhat Project
 
