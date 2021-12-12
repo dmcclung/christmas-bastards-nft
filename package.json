@@ -8,7 +8,8 @@
     "deploy:rinkeby": "hardhat run scripts/deploy.ts --network rinkeby",
     "test": "hardhat test",
     "deploy": "hardhat run scripts/deploy.ts",
-    "mint": "hardhat run scripts/mint.ts --network rinkeby"
+    "mint": "hardhat run scripts/mint.ts --network rinkeby",
+    "mint:local": "hardhat run scripts/mint.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",

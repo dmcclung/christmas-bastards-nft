@@ -87,7 +87,22 @@ contract Loot is ERC721URIStorage {
         );
         /* solhint-enable quotes */
 
-        _setTokenURI(tokenId, json);
+        string memory finalTokenUri = string(
+            abi.encodePacked("data:application/json;base64,", json)
+        );
+
+        console.log("\n--------------------");
+        console.log(
+            string(
+                abi.encodePacked(
+                    "https://nftpreview.0xdev.codes/?code=",
+                    finalTokenUri
+                )
+            )
+        );
+        console.log("--------------------\n");
+
+        _setTokenURI(tokenId, finalTokenUri);
     }
 
 }
